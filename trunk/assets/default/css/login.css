@@ -1,0 +1,106 @@
+/**
+ * FileName: login.css
+ * Date: 2016.06.21
+ * Author: hexiaohui@sayimo.cn
+ */
+
+.wrap{position: absolute;left: 0;top: 0;right: 0;bottom: 0;}
+.wrap .wrap-top{margin: 0 auto;width: 1114px;height: 109px;line-height: 109px;}
+.wrap-top h1{
+	background: rgba(0, 0, 0, 0) url("../images/default/loginLogo.png") no-repeat scroll 0 center;
+    color: #535353;
+    font-size: 24px;
+    font-weight: normal;
+    text-indent: 130px;
+    height: 109px;
+    line-height: 109px;
+}
+.wrap .login_banner{
+	background: rgba(0, 0, 0, 0) url("../images/default/login_banner.png") no-repeat scroll center center;
+    height: 548px;
+    position: relative;
+    width: 100%;
+}
+.login_banner .channellogin {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    border-radius: 8px;
+}
+.channellogin, .channellogin-glass, .channellogin-scalebg {
+    height: 328px;
+    left: 50%;
+    margin-left: 100px;
+    margin-top: -164px;
+    position: absolute;
+    top: 50%;
+    width: 425px;
+}
+.channellogin h3 {
+    color: #888;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 38px 0 2px;
+    text-indent: 45px;
+}
+.login_banner .channellogin-content {
+    padding: 0 45px;
+    position: relative;
+}
+
+div.channellogin-input {
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+    margin: 12px 0;
+    padding: 0;
+    position: relative;
+}
+.channellogin-input-username {
+    background: #ffffff url("../images/default/member.png") no-repeat scroll 10px 10px;
+}
+.channellogin-input-password {
+    background: #ffffff url("../images/default/pw.png") no-repeat scroll 10px 10px;
+}
+.channellogin-username, .channellogin-password {
+    margin: 0 20px 0 35px;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    width: 185px;
+}
+
+.channellogin-input-validateCode {
+    overflow: hidden;
+}
+
+.channellogin-input-validateCode input {
+    float: left;
+}
+.channellogin-validateCode {
+    border: 1px solid #c0c0c0;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 20px;
+    width: 60%;
+}
+.channellogin-input-validateCode img {
+    float: right;
+}
+input, div.channellogin-errmask {
+    border: 0 none;
+    border-radius: 1px;
+    font-size: 16px;
+    height: 42px;
+    margin: 0;
+    vertical-align: middle;
+}
+.divmsg {
+    color: red;
+    height: 20px;
+    text-align: center;
+}
+.channellogininp {
+    background-color: #14a4e7;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}

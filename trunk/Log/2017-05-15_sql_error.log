@@ -1,0 +1,20 @@
+2017-05-15 15:44:36 : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : SELECT * FROM t_goods_class WHERE  parentId = '0' AND status = '1' AND 
+2017-05-15 15:52:50 : Out of range value for column 'classSort' at row 1
+ [ SQL语句 ] : UPDATE t_goods_class SET `mallType`='1,2',`className`='hahhaw',`parentId`='0',`classLevel`='1',`photoUrl`='https://testapi.sayimo.cn/cy_goodslist/31343838333538393630303733.jpg',`isDisplay`='1',`classSort`='9999999999' WHERE  id = '100000029'
+2017-05-15 18:18:30 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-15 18:18:30 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-15 18:18:30 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-15 18:18:30 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-15 18:18:37 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-15 18:18:37 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-15 18:18:37 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-15 18:18:37 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10

@@ -1,0 +1,51 @@
+<?php if(!empty($list)){?>
+<table class="sui-table table-bordered-simple">
+  <thead>
+    <tr class="thbg">
+      <th colspan="9"></th>
+    </tr>
+    <tr class="thbk">
+      <th class="center">名称</th>
+      <th class="center">支持系统</th>
+      <th class="center">地址</th>
+      <th class="center">版本号</th>
+      <th class="center">上传时间</th>
+      <th class="center">状态</th>
+      <th class="center">操作</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<?php foreach($list as $rs){?>
+    <tr>
+      <td class="center"><?php echo $rs['name'];?></td>
+      <td class="center"><?php echo $mobileSysTypelist[$rs['mobileSysType']];?></td>
+      <td class="center"><?php if($rs['networkType'] == '0'){echo $rs['localUrl'];}elseif($rs['networkType']){echo $rs['networkUrl'];}?></td>
+      <td class="center"><?php echo $rs['version'];?></td>
+      <td class="center"><?php echo $rs['createDate'];?></td>
+      <td class="center"><?php echo $isNowlist[$rs['isNow']];?></td>
+      <td class="center">
+      	<?php echo form_a_auth(array('content'=>'查看','class'=>'btn-link','url'=>APP_URL.'appmanager/info?id='.$rs['id'].'&ref='.urlencode($ref),'img'=>'check.png'));?>
+      	<?php echo form_a_auth(array('content'=>'修改','class'=>'btn-link','url'=>APP_URL.'appmanager/edit?id='.$rs['id'].'&ref='.urlencode($ref),'img'=>'update.png'));?>
+      	<?php echo form_a_auth(array('content'=>'删除','class'=>'btn-link appmanager-delete','url'=>'appmanager/delete','rid'=>$rs['id'],'img'=>'delete.png'));?>
+      </td>
+    </tr>
+    <?php }?>
+  </tbody>
+</table>
+<?php }else{?>
+<table class="sui-table table-bordered-simple">
+	<tbody>
+	    <tr>
+	      <td class="center">亲，你还没有添加APP</td>
+    	</tr>
+	</tbody>
+</table>
+<?php }?>
+<script type="text/javascript" src="<?php echo ASSETS_URL;?>js/sayimo.js"></script>
+<script type="text/javascript">
+var _delete = {};
+_delete.body = '确认删除该APP';
+_delete.form = $('#mainInfo');
+_delete.url = OO._SRVPATH + 'appmanager/delete?ref=<?php echo urlencode($ref);?>';
+SAYIMO.form.dialog('.appmanager-delete',_delete);
+</script>

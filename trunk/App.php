@@ -1,0 +1,284 @@
+<?php
+
+/**
+ * 应用服务控制器
+ * @author janhve@163.com
+ * @date   2014-05-20
+ * @version 1.0
+ */
+
+class App{
+	private static $_instance = array();
+	//数据格式
+	private static $format = "json";
+	//当前支持的数据格式
+	private static $supported_format = array(
+		'xml'	=> 'application/xml',
+		'json'	=> 'application/json',
+		'html' => 'text/html',
+	);
+	public static $error_code = array();
+
+
+	public static function init(){
+		//设置系统时区
+		date_default_timezone_set(DEFAULT_TIMEZONE);
+		//文档类型及编码
+		self::$format = CONTENT_TYPE;
+		header('Content-Type:' . self::$supported_format[self::$format] . '; charset=' . CONTENT_CHARSET);
+		header('Cache-control: ' . CACHE_CONTROL);
+		header('X-Powered-By:openoa.com');
+	}
+	
+	public static function run(){
+		spl_autoload_register(array('App','autoload'));
+		//生成项目
+		App::createApp();
+		//执行
+		App::exec();
+	}
+	 
+	private static function createApp(){
+		//加载配置文件
+		if(is_file(CONF_PATH.'Conf.php'))
+			include(CONF_PATH.'Conf.php');
+		//加载错误码配置
+		if(is_file(CONF_PATH.'Code.php'))
+			self::$error_code = include(CONF_PATH.'Code.php');
+		if(is_file(CONF_PATH.'Param.php'))
+			include(CONF_PATH.'Param.php');
+
+		if (defined('ENVIRONMENT')){
+			switch (ENVIRONMENT){
+				case 'development':
+					//error_reporting(E_ALL);
+					error_reporting(E_ALL & ~E_NOTICE  & ~E_WARNING  & ~E_DEPRECATED);
+				break;
+				case 'production':
+					error_reporting(0);
+				break;
+				default:
+					App::response(13,'请正确设置运行环境!');
+			}
+		}
+		else
+			App::response(13,'没有设置运行环境!');
+		
+		//定义控制器目录
+		if (!defined("CORE_PATH"))
+			define("CORE_PATH",APP_PATH .'Core/');
+		//定义控制器目录
+		if (!defined("CONTROLLER_PATH"))
+			define("CONTROLLER_PATH",APP_PATH .'Controllers/');
+		//定义模型目录
+		if (!defined("MODEL_PATH"))
+			define("MODEL_PATH",APP_PATH .'Models/');
+		//定义REDIS目录
+		if (!defined("REDIS_PATH"))
+			define("REDIS_PATH",APP_PATH .'Redis/');
+		//定义视图目录
+		if (!defined("VIEW_PATH"))
+			define("VIEW_PATH",APP_PATH .'Views/');
+		//定义库目录
+		if (!defined("LIB_PATH"))
+			define("LIB_PATH",APP_PATH .'Lib/');
+		//定义函数目录
+		if (!defined("HELPER_PATH"))
+			define("HELPER_PATH",APP_PATH .'helpers/');
+		//定义日志目录
+		if (!defined("LOG_PATH"))
+			define("LOG_PATH",APP_PATH .'Log/');
+		//定义临时目录
+		if (!defined("TMP_PATH"))
+			define("TMP_PATH",APP_PATH .'Tmp/');
+		
+		$list  =  array(
+			CORE_PATH . 'Controller.php',
+			CORE_PATH . 'Model.php',
+			CORE_PATH . 'Mysql.php',
+			CORE_PATH . 'View.php'
+		);
+		if(!empty($list)){
+			foreach ($list as $file){
+				if(is_file($file))
+					require_once($file);
+			}
+		}
+	 }
+	
+	private static function exec(){
+		App::init();
+		App::apply();
+	}
+	
+	private static function apply(){
+		App::_setModuleMethod();
+		
+        // 安全检测
+        if(!preg_match('/^[A-Za-z_0-9]+$/',MODULE_NAME)){
+            App::response(31,'MODULE ['.MODULE_NAME.'] 名称中含有非法字符');
+        }
+		else{
+			//创建控制器实例
+			$module_path = CONTROLLER_PATH.MODULE_NAME.'.php';
+			if ( file_exists($module_path) ){
+				include($module_path);
+				$class     = basename(MODULE_NAME);
+				if(class_exists($class,false)){
+					$module = new $class();//控制器
+					$action = ACTION_NAME;//方法
+					
+					if(!empty($action) && method_exists($module,$action)){
+						
+						call_user_func_array(array(&$module, $action),array());
+					}
+					else
+						App::response(31,'action '.$action.' is not exist');
+				}
+				else{
+					App::response(31,'MODULE '.MODULE_NAME.' is not exist');
+				}
+
+			}
+			else
+				 App::response(12,'模块['.MODULE_NAME.']调用有误，或不支持此模块');
+		}
+	}
+	
+	private static function _setModuleMethod()
+	{
+		//nginx默认不支持path_info
+		if( isset($_SERVER['PATH_INFO']) || isset($_SERVER['ORIG_PATH_INFO']) )
+		{
+			$path_info = (isset($_SERVER['ORIG_PATH_INFO'])) ? $_SERVER['ORIG_PATH_INFO'] : $_SERVER['PATH_INFO'];
+			if(trim($path_info, '/') != '')
+			{
+				$paths    = explode('/', substr($path_info, 1));
+				$count    = count($paths);
+				define('MODULE_NAME', $paths[0]);
+				($count < 2) ? define('ACTION_NAME', DEFAULT_METHOD) : ( ('' != $paths[1]) ? define('ACTION_NAME', $paths[1]) : define('ACTION_NAME', DEFAULT_METHOD));
+			}
+			else
+			{
+				define('MODULE_NAME', DEFAULT_CONTROLLER);
+				define('ACTION_NAME', DEFAULT_METHOD);
+			}
+		}
+		elseif(isset($_SERVER['REQUEST_URI']) && trim($_SERVER['REQUEST_URI'], '/') != '')
+		{
+			$pathinfo = parse_url($_SERVER['REQUEST_URI']);
+			$paths    = substr(stristr($pathinfo['path'], "index.php/"), 10);
+			$paths    = explode('/', $paths);
+	
+			(isset($paths[0]) && '' != $paths[0]) ? define('MODULE_NAME', $paths[0]) : define('MODULE_NAME', DEFAULT_CONTROLLER);
+			(isset($paths[1]) && '' != $paths[1]) ? define('ACTION_NAME', $paths[1]) : define('ACTION_NAME', DEFAULT_METHOD);
+		}
+		else
+		{
+			define('MODULE_NAME', DEFAULT_CONTROLLER);
+			define('ACTION_NAME', DEFAULT_METHOD);
+		}
+	}
+	
+	public static function instance($class,$method='') {
+		$identify   =   $class.$method;
+		if(!isset(self::$_instance[$identify])) {
+			if(class_exists($class)){
+				$o = new $class();
+				if(!empty($method) && method_exists($o,$method))
+					self::$_instance[$identify] = call_user_func_array(array(&$o, $method));
+				else
+					self::$_instance[$identify] = $o;
+			}
+			else
+				App::response(11,'调用了不存在的类['.$class.']');
+		}
+		return self::$_instance[$identify];
+	 }
+	
+	private static function formatRequest(){
+		if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
+		{
+			if(isset($_GET))
+				$_GET = self::stripSlashes($_GET);
+			if(isset($_POST))
+				$_POST = self::stripSlashes($_POST);
+			if(isset($_REQUEST))
+				$_REQUEST = self::stripSlashes($_REQUEST);
+			if(isset($_COOKIE))
+				$_COOKIE = self::stripSlashes($_COOKIE);
+		}
+	}
+	 
+	private static function stripSlashes(&$data){
+		return is_array($data)?array_map(array(App,'stripSlashes'),$data):stripslashes($data);
+	}
+	
+	public static function autoload($class){
+		$classFile = CONTROLLER_PATH .$class.'.php';
+		if (is_file($classFile))
+			include_once($classFile);
+		else
+			App::response(11,'类文件['.$class.']不存在或路径错误!');
+	}
+	
+	public static function response($code,$data){
+		$output_type = strtolower(self::$format);
+		switch($output_type){
+			case 'json' :
+				if(200 === $code){
+					exit(json_encode(
+						array('code' => $code,
+							  'data' => $data
+						)
+					));
+				}
+				else{
+					exit(json_encode(
+						array('code' => $code,
+							  'msg'  => self::$error_code[$code],
+							  'detail' => $data
+						)
+					));
+				}
+				break;
+			case 'xml' :
+				if(200 === $code){
+					exit($data);
+				}
+				else{
+					//后续扩充
+				}
+				break;
+			case 'html' :
+				if(200 !== $code){
+					$html= '<!DOCTYPE html>
+							<html lang="en">
+							<head>
+								<meta charset="'.CONTENT_CHARSET.'">
+								<title>Error</title>
+								<style type="text/css">
+								body {background-color: #fff;margin: 40px;font: 13px/20px normal Helvetica, Arial, sans-serif;color: #4F5155;}
+								h1 {color: #444;background-color: transparent;border-bottom: 1px solid #D0D0D0;font-size: 19px;font-weight: normal;margin: 0 0 14px 0;padding: 14px 15px 10px 15px;}
+								#body{margin: 0 15px 0 15px;}
+								#container{margin: 10px;border: 1px solid #D0D0D0;-webkit-box-shadow: 0 0 8px #D0D0D0;}
+								</style>
+							</head>
+							<body>
+							<div id="container">
+								<h1>Error occurred</h1>
+								<div id="body">
+									<p>Code:'.$code.' '.self::$error_code[$code].'</p>
+									<p>Message:'.$data.'</p>
+								</div>
+							</div>
+							</body>
+							</html>
+							';
+					exit($html);
+				}
+				break;
+		}
+	}
+	
+}

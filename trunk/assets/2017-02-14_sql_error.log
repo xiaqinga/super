@@ -1,0 +1,86 @@
+2017-02-14 09:10:45 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:45 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:45 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:45 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:47 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:47 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game
+2017-02-14 09:10:49 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:49 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:49 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:49 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:53 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:53 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:53 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-02-14 09:10:53 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-02-14 09:10:54 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:10:54 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:10:54 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:10:54 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:02 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:11:02 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:02 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:11:02 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:05 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:05 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:06 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC
+2017-02-14 09:11:08 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:08 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:12 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.adName, a.sort, a.details, a.adLink, a.photoUrl, a.createDate  FROM t_base_adposition a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:12 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.adName, a.sort, a.details, a.adLink, a.photoUrl, a.createDate  FROM t_base_adposition a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:13 : Unknown column 'b.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.configName, a.tag, a.adpositionId, b.photoUrl FROM t_base_adposition_config a left join t_base_adposition b on b.id=a.adpositionId  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:13 : Unknown column 'b.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.configName, a.tag, a.adpositionId, b.photoUrl FROM t_base_adposition_config a left join t_base_adposition b on b.id=a.adpositionId  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:14 : Unknown column 'a.createDate' in 'order clause'
+ [ SQL语句 ] : SELECT a.*,b.alias FROM t_base_user_feedback a left join t_member_customer as b on b.id=a.customerId ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:14 : Unknown column 'a.createDate' in 'order clause'
+ [ SQL语句 ] : SELECT a.*,b.alias FROM t_base_user_feedback a left join t_member_customer as b on b.id=a.customerId ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:15 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.adName, a.sort, a.details, a.adLink, a.photoUrl, a.createDate  FROM t_base_adposition a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:15 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.adName, a.sort, a.details, a.adLink, a.photoUrl, a.createDate  FROM t_base_adposition a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:16 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:16 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:17 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:17 : Unknown column 'a.photoUrl' in 'field list'
+ [ SQL语句 ] : SELECT a.id, a.classId, a.title, a.details, a.photoUrl, a.sort,a.mark, a.instruction, a.materailId, a.urlPath, a.createDate, a.showType FROM t_base_media a  ORDER BY a.id ASC LIMIT 0,10
+2017-02-14 09:11:17 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:11:17 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10
+2017-02-14 09:11:17 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_activity a 
+2017-02-14 09:11:17 : Table 'sayimo_maker.t_base_activity' doesn't exist
+ [ SQL语句 ] : SELECT a.* FROM t_base_activity a  ORDER BY a.createDate desc LIMIT 0,10

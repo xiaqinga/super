@@ -1,0 +1,79 @@
+/**
+ * 商品列表图和轮廓图
+ * 303232810@qq.com
+ * 2016-08-16
+ */
+.photo_item{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    float: left;
+    margin-right: 10px;
+    margin-top:10px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.photo_item .sui-icon{ cursor: pointer; }
+.photo_item .photo_item, .photo_item .photo_bg, .photo_item .photo_del, .photo_item .photo_mvleft, .photo_item .photo_mvright{
+    position: absolute;
+}
+.photo_item .photo_bg{
+    background-color: rgba(0, 0, 0, 0.49);
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+}
+.photo_item .photo_item{
+    width: 130px;
+    height: 130px
+}
+.photo_item .photo_mvleft{
+    bottom: 0px;
+    left:5px;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    content: '';
+    z-index: 1;
+}
+.photo_item .photo_mvleft:hover, .photo_item .photo_mvright:hover, .photo_item .photo_del:hover{
+    opacity:0.50; 
+}
+.photo_item .photo_mvright{
+    bottom: 0px;
+    right:5px;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    content: '';
+    z-index: 1;
+}
+.photo_item .photo_del{
+    bottom: 0px;
+    right:40%;
+    width: 26px;
+    height: 26px;
+    overflow: hidden;
+    content: '';
+    z-index: 1;
+}
+.photo_item .photo_img{
+    width: 130;
+    height: 98;
+}
+
+/**
+ * 规格
+ */
+.norms-wrapper ul li{list-style: none;}
+.norms-wrapper ul.attr_list li{
+    float: left;
+    margin-bottom: 3px;
+}
+.norms-wrapper ul.attr_list li input.input-small{ margin-right: 3px; }
+.norms-wrapper ul.attr_list li .sui-icon{ margin-right: 10px;margin-left: 3px;color: #F44336; font-size: 14px;vertical-align: middle;middle; cursor: pointer;}
+.norms-wrapper .norms-list {padding-left: 18px; padding-right: 18px;margin-bottom: 23px;}
+.norms-wrapper .attr_list, .norms-wrapper .btn-add-attr{ float: left; }
+.norms-wrapper .btn-add-attr{height: 28px;line-height: 23px;}
+.norms-wrapper .btn-add-attr .sui-icon {font-size: 16px; vertical-align: middle; cursor: pointer;}
+.norms-wrapper .js_sizes tr td{ text-align: center; }

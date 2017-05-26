@@ -1,0 +1,4 @@
+2017-05-24 17:30:22 : Incorrect integer value: '' for column 'networkType' at row 1
+ [ SQL语句 ] : INSERT INTO t_app_manage (`name`,`appSign`,`iconUrl`,`version`,`appName`,`detail`,`networkType`,`localUrl`,`networkUrl`,`mobileSysType`,`apptype`,`createUser`,`isNow`,`createDate`,`updateDate`) VALUES('未来梦客','','','1.2.0','','111','','https://testapi.sayimo.cn/cy_app/290ea50c08c2fd50a74aaacfcec5a777ba112d80d9cdcdd7c260ddd9af4ff3935ce66342d1b726d82da2de484a8e4499.zip','','2','0','69','Y','2017-05-24 17:30:22','2017-05-24 17:30:22')
+2017-05-24 17:32:47 : Data too long for column 'localUrl' at row 1
+ [ SQL语句 ] : INSERT INTO t_app_manage (`name`,`version`,`detail`,`localUrl`,`mobileSysType`,`createUser`,`isNow`,`createDate`,`updateDate`) VALUES('未来梦客','1.2.0','111','https://testapi.sayimo.cn/cy_app/290ea50c08c2fd50a74aaacfcec5a777ba112d80d9cdcdd7c260ddd9af4ff3935ce66342d1b726d82da2de484a8e4499.zip','2','69','Y','2017-05-24 17:32:47','2017-05-24 17:32:47')

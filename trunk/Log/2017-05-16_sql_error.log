@@ -1,0 +1,16 @@
+2017-05-16 15:42:09 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-16 15:42:09 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-16 15:42:09 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-16 15:42:09 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-16 15:42:12 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-16 15:42:12 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10
+2017-05-16 15:42:12 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT 1 FROM t_base_startup_game
+2017-05-16 15:42:12 : Table 'sayimo_maker.t_base_startup_game' doesn't exist
+ [ SQL语句 ] : SELECT * FROM t_base_startup_game LIMIT 0,10

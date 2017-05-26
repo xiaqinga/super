@@ -1,0 +1,52 @@
+/**
+ * FileName: sui.fix.css
+ * Date: 2016.06.21
+ * Author: hexiaohui@sayimo.cn
+ */
+
+/*header*/
+header{width: 100%;height: 50px;background: #0098CD;}
+	header .bug-logo{margin-left: 50px;}
+	header .message{margin: 5px 15px;line-height: 40px;}
+	header .message{padding-left: 15px;border-left: 1px solid #43B3D9;}
+	header .message a:hover{text-decoration: underline;}
+	header .control{margin-right: 40px;line-height: 50px;}
+	header .control a{padding: 0 15px;border-left: 1px solid #43B3D9;transition: all .3s ease;}
+	header .control a:hover{background: #0091C8;}
+	header .control a:last-child{border: none;}
+	header .control a:last-child span{font-size: 34px;vertical-align: sub;margin-right: 5px;}
+	header .control a .bug-icon{display: inline-block;width: 20px;height: 20px;margin-right: 5px;vertical-align: middle;}
+	header .control a .bug-icon-exit{background-position: -30px -22px;}
+	header .control a .bug-icon-pass{background-position: -30px -2px;}
+	
+/*nav*/
+nav{width: 200px;position: absolute;top: 50px;bottom: 0;left: 0;background: #283038;}
+	nav .search{width: 198px;margin: 20px 0;padding: 5px 0;border-left: 2px solid #F0F0F0;}
+	nav .search .box{margin: 0 10px;border-bottom: 1px solid #F0F0F0;}
+	nav .search .box .bug-icon-se-1{width: 20px;height: 20px;background-position: -30px -40px;margin: 5px 5px 5px 0;}
+	nav .search .box input{width: 138px;border: none;background: none;line-height: 30px;padding: 0 5px;}
+	nav .nav-list{width: 100%;border-top: 5px solid #696B6F;position: relative;}
+	nav .nav-list .bar{width: 100%;height: 50px;position: absolute;left: 0;z-index: 0;background: #0098CD;}
+	nav .nav-list .bar i{position: absolute;top: 10px;right: 0;width: 0;height: 0;border-top: 15px solid transparent;border-bottom: 15px solid transparent;border-right: 15px solid #F0F0F0;}
+	nav .nav-list ul{position: absolute;top: 0;left: 0;right: 0;z-index: 1;}
+	nav .nav-list li{width: 100%;line-height: 50px;}
+	nav .nav-list li a{display: block;padding-left: 45px;}
+	nav .nav-list li a .bug-icon{display: inline-block;width: 26px;height: 26px;vertical-align: middle;margin-right: 5px;}
+	nav .nav-list li a .bug-icon-nav-1{background-position: -95px -2px;}
+	nav .nav-list li a .bug-icon-nav-2{background-position: -95px -28px;}
+	nav .nav-list li a .bug-icon-nav-3{background-position: -95px -54px;}
+	nav .nav-list li a .bug-icon-nav-4{background-position: -95px -80px;}
+	nav .nav-list li a .bug-icon-nav-5{background-position: -95px -106px;}
+	nav .nav-list li a .bug-icon-nav-6{background-position: -95px -130px;}
+	nav .nav-list li a .bug-icon-nav-7{background-position: -95px -158px;}
+	
+/*wrap*/
+.wrap{position: absolute;top: 50px;left: 200px;right: 0;bottom: 0;overflow-y: scroll;background: #F0F0F0;padding: 10px;}
+	.wrap::-webkit-scrollbar{width: 10px;height: 10px;}  
+	.wrap::-webkit-scrollbar-track{background-color: #F5F5F5;}  
+	.wrap::-webkit-scrollbar-thumb{border-radius: 5px;background: #283038;}  
+	.wrap .container{background: #FFFFFF;padding-right: 20%;padding-bottom: 10px;min-width: 980px;}
+	@media only screen and (max-width: 1680px){
+		.wrap .container{padding-right: 0;}
+		.header{margin-right: 10px;}
+	}

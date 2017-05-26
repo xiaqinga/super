@@ -1,0 +1,8 @@
+2017-05-08 17:54:48 : Unknown column 'a.id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM t_base_maker_news ORDER BY a.id DESC LIMIT 0,10
+2017-05-08 17:54:48 : Unknown column 'a.id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM t_base_maker_news ORDER BY a.id DESC LIMIT 0,10
+2017-05-08 17:54:49 : Unknown column 'a.id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM t_base_maker_news ORDER BY a.id DESC LIMIT 0,10
+2017-05-08 17:54:49 : Unknown column 'a.id' in 'order clause'
+ [ SQL语句 ] : SELECT * FROM t_base_maker_news ORDER BY a.id DESC LIMIT 0,10

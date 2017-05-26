@@ -1,0 +1,449 @@
+/**
+ * FileName: base.css
+ * Date: 2016.07.11
+ * Author: yinjianhhui@sayimo.cn
+ */
+body{
+	margin: 0;
+    padding: 0;
+    background-color:#eaf1f8;
+    font-family: "微软雅黑";
+}
+.sui-dropup.dropdown-bordered, .sui-dropdown.dropdown-bordered {
+    display: inline-block;
+    font-size: 12px;
+    height: 28px;
+    line-height: 22px;
+    padding: 0;
+    vertical-align: middle;
+}
+.sui-navbar{
+	min-width: 1280px;
+	z-index: 2;
+}
+.sui-navbar .navbar-inner {
+	background-color: #31a1d6;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+    border-bottom: 5px solid #2e8bb9;
+    color: #fbfafa;
+    border-radius: 0;
+    min-height: 40px;
+    padding-right: 0;
+}
+.sui-navbar .sui-nav{
+	margin-left: 30px;
+}
+.sui-navbar .sui-nav .sui-dropdown.open .dropdown-toggle, .sui-navbar .sui-nav > .active > a, .sui-navbar .sui-nav .sui-dropdown.open .dropdown-toggle:hover, .sui-navbar .sui-nav > .active > a:hover, .sui-navbar .sui-nav .sui-dropdown.open .dropdown-toggle:focus, .sui-navbar .sui-nav > .active > a:focus {
+    background-color: #31a1d6;
+    color: #fbfafa;
+    text-decoration: none;
+}
+.sui-navbar .sui-nav > li {
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sui-navbar .sui-nav > li {
+	margin-top: 20px;
+    padding-top: 40px;
+}
+.sui-navbar .sui-nav > li.topIndex {
+    background: rgba(0, 0, 0, 0) url("../images/default/shouye.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topShop {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon_Mallmanagement.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topMember {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon-Homepage.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topYWGL {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon_manage.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topMarket {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon_Operationsmanagement.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topCount {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon_Statisticalmanagement.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li.topSys {
+    background: rgba(0, 0, 0, 0) url("../images/default/icon_Systemmanagement.png") no-repeat scroll center top;
+}
+.sui-navbar .sui-nav > li > a {
+    color: #fbfafa;
+    float: none;
+    padding: 11px 15px;
+    text-decoration: none;
+    text-shadow: none;
+}
+.sui-navbar .sui-nav > li > a:focus,.sui-navbar .sui-nav > li > a:hover{
+	color: #fbfafa;
+}
+/*文本多出省略号*/
+.ellipsis{-webkit-flex-shrink: 1;-ms-flex: 0 1 auto;-webkit-flex-shrink: 1;flex-shrink: 1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+.son_location_1000{position: absolute;z-index: 1000;}
+.son_location_1200{position: absolute;z-index: 1200;}
+.parent_location{position: relative;}
+
+.sui-navbar .positionBar {
+    color: white;
+    float: right;
+    font-size: 14px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+}
+.sui-navbar .sui-nav .menuControl {
+    background: rgba(0, 0, 0, 0) url("../images/default/admin_logo.png") no-repeat scroll 0 0;
+    color: #fbfafa;
+    font-family: "STKaiti","华文楷体","Microsoft YaHei","微软雅黑";
+    height: 51px;
+    line-height: 10px;
+    margin-left: 35px;
+    overflow: hidden;
+    padding-left: 100px;
+    padding-right: 10px;
+    text-align: right;
+}
+.sui-navbar .sui-nav .official_link {
+    background-color: #2e8bb9;
+    border-left: 1px solid #4f95b8;
+    border-top: 1px solid #4f95b8;
+    border-top-left-radius: 70px 35px;
+    font-family: "STKaiti","华文楷体","Microsoft YaHei","微软雅黑";
+    margin-top: 14px;
+    padding: 10px 5px 5px 35px;
+    position: relative;
+    list-style: none;
+}
+.sui-navbar .sui-nav .official_link > li{
+	display: block;
+	float:left;
+	margin-left: 6px;
+}
+.sui-navbar .sui-nav .official_link .a {
+    cursor: pointer;
+    outline: medium none;
+}
+.mt-3 {
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.mi_16 {
+    height: 16px;
+    line-height: 16px !important;
+    width: 16px;
+}
+.mi_14 {
+    height: 14px;
+    line-height: 14px !important;
+    width: 14px;
+}
+.mi {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.sui-layout {
+    margin-top: -18px;
+}
+.sui-layout .sidebar {
+    float: left;
+    margin-left: 20px;
+    width: 179px;
+    overflow-y: auto;
+}
+.sui-nav.nav-list{
+	background-color: #FFFFFF;
+	margin-top: -5px;
+    margin-left: 5px;
+}
+.sidebar .nav-header{
+    background: rgba(0, 0, 0, 0) url("../images/default/left-menu-bg.png") no-repeat scroll 0 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+    height: 43px;
+    line-height: 36px;
+    margin-top: 10px;
+    text-align: center;
+    padding:0;
+    border-top:0;
+    position: relative;
+}
+.sui-nav.nav-list.nav-xlarge > li{
+    color: #6c6d6e;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    border-top: 1px dashed #f0f0f0;
+}
+.sui-nav.nav-list.nav-xlarge > .topli {
+    border-top: none;
+}
+.sui-nav.nav-list > .active > a, .sui-nav.nav-list > .active > a:hover, .sui-nav.nav-list > .active > a:focus {
+    background-color: #FFFFFF;
+    color: #00a7db;
+    font-weight: 200;
+    text-shadow: 0;
+}
+.sui-nav > li > a:hover, .sui-nav > li > a:focus{
+	background-color: #FFFFFF;
+	color: #00a7db;
+	font-weight: 200;
+}
+.sui-nav > li > a {
+    color: #6c6d6e;
+}
+.sui-nav.nav-xlarge > li > a {
+    font-size: 14px;
+    padding: 6px 16px;
+}
+.sui-layout .content {
+    margin-left: 0;
+    padding:10px;
+    overflow: auto;
+}
+.content tr.orderTr1 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f2f2f2;
+    border-color: -moz-use-text-color -moz-use-text-color #d0d0d0;
+    border-image: none;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    color: #636363;
+}
+tr.orderTr1 td.orderTdbj1 {
+    border: 0 none;
+    width: 10px;
+}
+tr.orderTr1 td.orderTdbj2 {
+    border: 0 none;
+    width: 5px;
+}
+tr.orderTr1 td {
+    border: 0 none;
+}
+
+.content tr.orderTr {
+    border: 0 none;
+    color: #636363;
+}
+tr.orderTr td.orderTdbj1 {
+    border: 0 none;
+    width: 10px;
+}
+tr.orderTr td.orderTdbj2 {
+    border: 0 none;
+    width: 5px;
+}
+tr.orderTr td {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d0d0d0 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: dashed none none;
+    border-width: 1px 0 0;
+    line-height: 40px;
+    padding-bottom: 10px;
+}
+.content .navList {
+    margin: 10px auto;
+    overflow: hidden;
+    width: 96%;
+}
+.content .navList ul {
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+.content .navList li {
+    width: 100%;height: 80px;
+}
+.content .navList li ol{float: left;display: inline;width: 20%;height: 100%;text-align: center;color: #FFFFFF;font-size: 16px;line-height: 20px;}
+.content .navList ol div{border-bottom: 2px solid #FFFFFF;border-right: 2px solid #FFFFFF;padding: 19px 0;}
+
+.navList li .listBox {
+    margin-left: 10px;
+}
+.navList li .OrderCount {
+    font-size: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: -20px 0 0;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+}
+
+.content .content-main{
+	background-color: #FFFFFF;
+	overflow: auto;
+}
+.content .content-top{
+	height: 60px;
+    margin: 8px auto 0;
+}
+.content .content-top .sui-form {
+    font-size: 12px;
+    line-height: 55px;
+    margin: 0 0 18px;
+    padding-left: 20px;
+}
+.sui-table.table-bordered-simple {
+    border-collapse: collapse;
+}
+.sui-table.table-bordered-simple th {
+    background-color: #00a7db;
+    color: #fff;
+}
+.sui-table.table-bordered-simple .thbg th{
+	padding: 0;
+	height: 5px;
+}
+.sui-table.table-bordered-simple .thbk th{
+	border-right: 1px solid #eaf1f8;
+}
+.imgtable {
+    height: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 16px;
+}
+.sui-table th img, .sui-table td img, .sui-table th label, .sui-table td label {
+    margin-right: 0;
+}
+.btn-link {
+    border-color: transparent;
+    border-radius: 0;
+    color: #9b9b9b;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.btn-link:hover, .btn-link:focus {
+	text-decoration: none;
+}
+.content .nav-title{
+    border-left: 3px solid #28a3ef;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+.nav-title .sui-text-{
+	margin-right: 10px;
+}
+.required{
+	color: #FF0000;
+}
+.content .nav-line{
+    margin-top: 20px;
+    border-top: 1px solid #eaedf2;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #999999;
+}
+.footer {
+    background-color: #00a7db;
+    bottom: 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2) inset;
+    font-family: "AdobeHeitiStd","Microsoft YaHei","微软雅黑";
+    font-size: 14px;
+    height: 33px;
+    line-height: 22px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.footer .copyright {
+    color: #666;
+    padding: 0 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+    top: 5px;
+    z-index: 3;
+}
+
+.footer a:link {
+	cursor: pointer;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+.footer a{
+	color: #000000;
+    cursor: pointer;
+    outline: medium none;
+}
+#mainInfo .load-wrapper{
+    overflow-y:scroll;
+    height: 740px; 
+}
+
+.market_dt10 {
+    background-color: #00a7db;
+    height: 55px;
+}
+.market_b8 {
+    color: #fff;
+    float: left;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    width: 8%;
+}
+.market_b9 {
+    background-color: #fff;
+    float: left;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    width: 92%;
+}
+
+#S-file {
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    cursor: pointer;
+}
+/*背景色*/
+.bff{background: #FFFFFF;}
+.b00{background-color: #0098CD;}
+.b2a{background-color: #2A8FD2;}
+.b28{background-color: #283038;}
+.bdb{background-color: #DB524B;}
+.bf2{background-color: #F2AE43;}
+.b58{background-color: #58B957;}
+.b72{background-color: #72b748;}
+.b02{background-color: #02bbef;}
+.bffb{background-color: #ffb500;}
+.bdf{background-color: #df567a;}
+.b73{background-color: #737373;}
