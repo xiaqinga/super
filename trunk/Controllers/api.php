@@ -17,6 +17,7 @@ class api extends Controller {
 	{
 		parent::__construct();
 		//请求认证
+        echo 1;
 		$this->requestAuth();
 	}
 	
