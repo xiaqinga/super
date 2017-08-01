@@ -14,7 +14,7 @@
  */
 $in_request_param = array(
 	'int'    => array(
-		'id',
+		'ids',
 		'uuid',
 		'cid',
 		'mid',
